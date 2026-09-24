@@ -29,15 +29,15 @@ const ARCHIVES_DATA: ArchiveItem[] = [
     category: 'EDITORIAL',
     url: '/images/editorial_male.jpg',
     title: 'Vogue Hommes Paris — "Nocturne Tailoring"',
-    credits: 'Photographer: Kenzo M. · Saint Laurent Tailoring · Paris Issue'
+    credits: 'Nhiếp ảnh: Kenzo M. · Âu phục Saint Laurent · Ấn bản Paris'
   },
   {
     id: 'arch-2',
     type: 'photo',
     category: 'GROOMING',
     url: '/images/grooming_male.jpg',
-    title: 'Dior Men — Timepiece & Grooming Global Campaign',
-    credits: 'Brand: Dior Beauty · Tokyo & Paris Release'
+    title: 'Dior Men — Chiến dịch Toàn cầu Đồng hồ & Grooming',
+    credits: 'Thương hiệu: Dior Beauty · Phát hành Tokyo & Paris'
   },
   {
     id: 'arch-3',
@@ -45,40 +45,40 @@ const ARCHIVES_DATA: ArchiveItem[] = [
     category: 'MOTION',
     url: '/video/reel.mp4',
     thumb: '/images/motion_male.jpg',
-    title: 'Kinetic Silhouette — Fashion Film Tokyo',
-    credits: 'Director: Lisa Wong · Cinema 4K · Award Selection'
+    title: 'Kinetic Silhouette — Phim Thời trang Tokyo',
+    credits: 'Đạo diễn: Lisa Wong · Chuẩn điện ảnh 4K · Tuyển chọn giải thưởng'
   },
   {
     id: 'arch-4',
     type: 'photo',
     category: 'RUNWAY',
     url: '/images/runway_male.jpg',
-    title: 'Giorgio Armani Menswear SS26 Runway Lead',
-    credits: 'Catwalk Opening Walk · Milan Fashion Week'
+    title: 'Giorgio Armani Menswear SS26 — Dẫn đầu Runway',
+    credits: 'Trình diễn mở màn (First Face) · Tuần lễ Thời trang Milan'
   },
   {
     id: 'arch-5',
     type: 'photo',
     category: 'PORTRAIT',
     url: '/images/portrait_male.jpg',
-    title: 'GQ Japan — Obsidian Monolith Studio No. 1',
-    credits: 'Photographer: Shinji Ogawa · Black & White Studio'
+    title: 'GQ Japan — Chân dung Studio Obsidian Số 1',
+    credits: 'Nhiếp ảnh: Shinji Ogawa · Studio Chân dung Đen Trắng'
   },
   {
     id: 'arch-6',
     type: 'photo',
     category: 'EDITORIAL',
     url: '/images/compcard_3.jpg',
-    title: 'L’Officiel Hommes — Structure & Form',
-    credits: 'Stylist: Emi K. · Milan Fall Edition'
+    title: 'L’Officiel Hommes — Cấu trúc & Phom dáng',
+    credits: 'Stylist: Emi K. · Ấn phẩm Mùa thu Milan'
   },
   {
     id: 'arch-7',
     type: 'photo',
     category: 'GROOMING',
     url: '/images/compcard_1.jpg',
-    title: 'Shiseido Men Skin Architecture Campaign',
-    credits: 'Photographer: Hiroshi Tanaka · Asia Pacific'
+    title: 'Shiseido Men — Chiến dịch Kiến trúc Làn da',
+    credits: 'Nhiếp ảnh: Hiroshi Tanaka · Khu vực Châu Á Thái Bình Dương'
   },
   {
     id: 'arch-8',
@@ -86,31 +86,31 @@ const ARCHIVES_DATA: ArchiveItem[] = [
     category: 'MOTION',
     url: '/video/reel.mp4',
     thumb: '/images/hero_male.jpg',
-    title: 'Tokyo Twilight Movement Piece',
-    credits: 'Production: Studio Zero · Paris/Tokyo'
+    title: 'Tokyo Twilight — Tác phẩm Chuyển động Hoàng hôn',
+    credits: 'Sản xuất: Studio Zero · Paris & Tokyo'
   },
   {
     id: 'arch-9',
     type: 'photo',
     category: 'RUNWAY',
     url: '/images/compcard_2.jpg',
-    title: 'Fendi Menswear Runway Lookbook',
-    credits: 'Milan Fashion Week Winter Collection'
+    title: 'Fendi Menswear — Lookbook Trình diễn Runway',
+    credits: 'Bộ sưu tập Mùa đông · Tuần lễ Thời trang Milan'
   },
   {
     id: 'arch-10',
     type: 'photo',
     category: 'PORTRAIT',
     url: '/images/hero_male.jpg',
-    title: 'Natural Light Cast Study — Tokyo HQ',
-    credits: 'Photographer: Aoi Sano · Natural Studio'
+    title: 'Nghiên cứu Ánh sáng Tự nhiên — Trụ sở Tokyo',
+    credits: 'Nhiếp ảnh: Aoi Sano · Studio Ánh sáng Tự nhiên'
   },
   {
     id: 'arch-11',
     type: 'photo',
     category: 'EDITORIAL',
     url: '/images/runway_male.jpg',
-    title: 'Esquire International Tailoring Issue',
+    title: 'Esquire International — Ấn bản Âu phục May đo',
     credits: 'Stylist: Marc D. · London'
   },
   {
@@ -119,8 +119,8 @@ const ARCHIVES_DATA: ArchiveItem[] = [
     category: 'MOTION',
     url: '/video/reel.mp4',
     thumb: '/images/compcard_3.jpg',
-    title: 'Kinetic Fashion Film Teaser II',
-    credits: 'Director: Lisa Wong · 60fps Ultra Cinema'
+    title: 'Kinetic Fashion Film — Teaser II',
+    credits: 'Đạo diễn: Lisa Wong · Chuẩn điện ảnh 60fps'
   }
 ];
 
@@ -170,11 +170,11 @@ function updateShutterController() {
 
   if (shutterStatus) {
     if (eased >= 0.98) {
-      shutterStatus.textContent = 'SHUTTER: APERTURE OPEN (F/1.4)';
+      shutterStatus.textContent = 'MÀN TRẬP: KHẨU ĐỘ MỞ (F/1.4)';
     } else if (eased <= 0.02) {
-      shutterStatus.textContent = 'SHUTTER: SEALED';
+      shutterStatus.textContent = 'MÀN TRẬP: ĐÃ ĐÓNG';
     } else {
-      shutterStatus.textContent = `SHUTTER: APERTURE ${Math.round(eased * 100)}%`;
+      shutterStatus.textContent = `MÀN TRẬP: KHẨU ĐỘ ${Math.round(eased * 100)}%`;
     }
   }
 }
@@ -339,8 +339,8 @@ if (portalVideo) {
     portalVideo.muted = !portalVideo.muted;
     if (portalMuteBtn) {
       portalMuteBtn.innerHTML = portalVideo.muted
-        ? '<span class="hud-btn-icon">&#128263;</span> MUTED'
-        : '<span class="hud-btn-icon">&#128266;</span> AUDIO ON';
+        ? '<span class="hud-btn-icon">&#128263;</span> TẮT TIẾNG'
+        : '<span class="hud-btn-icon">&#128266;</span> BẬT TIẾNG';
     }
   });
 
@@ -350,8 +350,8 @@ if (portalVideo) {
       type: 'video',
       category: 'MOTION',
       url: '/video/reel.mp4',
-      title: 'Paris · Tokyo SS26 Kinetic Campaign',
-      credits: 'Director: Lisa Wong · 4K ProRes · Fullscreen Master'
+      title: 'Chiến dịch Chuyển động SS26 · Paris & Tokyo',
+      credits: 'Đạo diễn: Lisa Wong · 4K ProRes · Bản gốc Toàn màn hình'
     });
   });
 }
@@ -377,7 +377,7 @@ function renderArchives(filter = 'ALL') {
 
     card.innerHTML = `
       <img src="${item.thumb || item.url}" alt="${item.title}" loading="lazy" />
-      ${item.type === 'video' ? '<div class="video-badge">&#9658; MOTION REEL</div>' : ''}
+      ${item.type === 'video' ? '<div class="video-badge">&#9658; THƯỚC PHIM</div>' : ''}
       <div class="grid-overlay">
         <h4 class="grid-title">${item.title}</h4>
         <p class="grid-meta">${item.credits}</p>
@@ -411,7 +411,7 @@ const albumStories: Record<string, ArchiveItem> = {
     category: 'EDITORIAL',
     url: '/images/editorial_male.jpg',
     title: 'Vogue Hommes Paris — "Nocturne Tailoring"',
-    credits: 'Photographer: Kenzo M. · Saint Laurent Tailoring · 12-Shot Series'
+    credits: 'Nhiếp ảnh: Kenzo M. · Âu phục Saint Laurent · Bộ ảnh 12 khung hình'
   },
   dior: {
     id: 'dior-master',
@@ -419,7 +419,7 @@ const albumStories: Record<string, ArchiveItem> = {
     category: 'MOTION',
     url: '/video/reel.mp4',
     title: 'Dior Men — "The Kinetic Silhouette"',
-    credits: 'Director: Lisa Wong · Worldwide Commercial Film & Timepiece Stills'
+    credits: 'Đạo diễn: Lisa Wong · Phim thương mại toàn cầu & Ảnh tĩnh đồng hồ'
   },
   runway: {
     id: 'runway-master',
@@ -427,7 +427,7 @@ const albumStories: Record<string, ArchiveItem> = {
     category: 'RUNWAY',
     url: '/images/runway_male.jpg',
     title: 'Milan Fashion Week — "Catwalk Protocol"',
-    credits: 'First Face Opening Walk · Giorgio Armani & Fendi Menswear'
+    credits: 'Trình diễn mở màn · Giorgio Armani & Fendi Menswear'
   },
   portrait: {
     id: 'portrait-master',
@@ -435,7 +435,7 @@ const albumStories: Record<string, ArchiveItem> = {
     category: 'PORTRAIT',
     url: '/images/portrait_male.jpg',
     title: 'GQ Japan — "Obsidian Monolith"',
-    credits: 'Photographer: Shinji Ogawa · Black & White Studio Study'
+    credits: 'Nhiếp ảnh: Shinji Ogawa · Nghiên cứu chân dung studio đen trắng'
   }
 };
 
@@ -458,32 +458,32 @@ const polaroidDetails: ArchiveItem[] = [
     type: 'photo',
     category: 'PORTRAIT',
     url: '/images/compcard_1.jpg',
-    title: 'Polaroid 01 — Profile Angle Study',
-    credits: 'Paris Casting Session 2026 · Image Models Agency Verified'
+    title: 'Polaroid 01 — Nghiên cứu Góc mặt Nghiêng',
+    credits: 'Buổi tuyển chọn người mẫu Paris 2026 · Xác thực bởi Image Models'
   },
   {
     id: 'polaroid-2',
     type: 'photo',
     category: 'RUNWAY',
     url: '/images/compcard_2.jpg',
-    title: 'Polaroid 02 — Full Body 188cm Ratio',
-    credits: 'Fit Ratio Check · Milan Agency Selection'
+    title: 'Polaroid 02 — Tỉ lệ Toàn thân 188cm',
+    credits: 'Kiểm tra tỉ lệ hình thể · Tuyển chọn bởi công ty Milan'
   },
   {
     id: 'polaroid-3',
     type: 'photo',
     category: 'EDITORIAL',
     url: '/images/compcard_3.jpg',
-    title: 'Polaroid 03 — Formal Tailoring 48L',
-    credits: 'Suit 48L Fit Verification · Paris SS26'
+    title: 'Polaroid 03 — Âu phục May đo 48L',
+    credits: 'Xác thực độ vừa vặn vest 48L · Paris SS26'
   },
   {
     id: 'polaroid-4',
     type: 'photo',
     category: 'PORTRAIT',
     url: '/images/portrait_male.jpg',
-    title: 'Polaroid 04 — Obsidian Monochrome Portrait',
-    credits: 'Natural Studio Light · Tokyo Headshot'
+    title: 'Polaroid 04 — Chân dung Mộc Đen Trắng Obsidian',
+    credits: 'Ánh sáng tự nhiên tại studio · Chụp cận cảnh Tokyo'
   }
 ];
 
@@ -567,7 +567,7 @@ const feedbackMsg = document.getElementById('form-feedback-msg');
 bookingForm?.addEventListener('submit', (e) => {
   e.preventDefault();
   if (feedbackMsg) {
-    feedbackMsg.textContent = 'Inquiry transmitted to Tokyo HQ & European management. You will receive representation confirmation within 24 hours.';
+    feedbackMsg.textContent = 'Yêu cầu hợp tác đã được chuyển tới văn phòng Tokyo & ban quản lý châu Âu. Chúng tôi sẽ phản hồi xác nhận trong vòng 24 giờ.';
     feedbackMsg.style.color = '#555f4f';
     feedbackMsg.style.fontWeight = '500';
   }
@@ -616,12 +616,12 @@ audioToggle?.addEventListener('click', () => {
     gsap.to(gainNode.gain, { value: 0.08, duration: 1.5 });
     audioToggle.classList.add('active');
     const txt = audioToggle.querySelector('.sound-text');
-    if (txt) txt.textContent = 'SOUND: ON';
+    if (txt) txt.textContent = 'ÂM THANH: BẬT';
   } else if (gainNode) {
     gsap.to(gainNode.gain, { value: 0, duration: 1.5 });
     audioToggle.classList.remove('active');
     const txt = audioToggle.querySelector('.sound-text');
-    if (txt) txt.textContent = 'SOUND: OFF';
+    if (txt) txt.textContent = 'ÂM THANH: TẮT';
   }
 });
 
